@@ -8,8 +8,15 @@ public class KDV_TutariHesaplayanProgram {
         System.out.println("KDV-ni hesaplamak istediginiz para degerini girin: ");
         KDV_siz_fiyat= sc.nextFloat();
 
-        KDV_tutari=(KDV_siz_fiyat*18f/100f);
-        KDV_li_fiyat=KDV_siz_fiyat+KDV_tutari;
+        if(KDV_siz_fiyat>100){
+            KDV_tutari=(KDV_siz_fiyat*18f/100f);
+            KDV_li_fiyat=KDV_siz_fiyat+KDV_tutari;
+        } else {
+            KDV_tutari=(KDV_siz_fiyat*8f/100f);
+            KDV_li_fiyat=KDV_siz_fiyat+KDV_tutari;
+        }
+
+
 
         System.out.println("Girilen para degeri 18% KDV orani ile hesaplanacak");
         System.out.println("KDV'siz fiyat:"+ KDV_siz_fiyat);
